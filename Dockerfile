@@ -6,6 +6,6 @@ RUN git clone https://github.com/frederiksberg/tilehut
 
 WORKDIR tilehut
 
-RUN npm install --verbose
+RUN npm install
 
 CMD npm start
