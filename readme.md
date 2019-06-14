@@ -28,7 +28,7 @@ And replace gis.frederiksberg.dk with an email you own.
 
 Then run
 ```shell
-# init.sh
+# sh init.sh
 ```
 
 This will setup nginx with https and and set up auto renewal.
