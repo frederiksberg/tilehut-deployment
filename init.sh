@@ -5,8 +5,8 @@
 
 # Create host_keys
 mkdir -p host_keys
-ssh-keygen -t ed25519 -f host_keys/ssh_host_ed25519_key < /dev/null
-ssh-keygen -t rsa -b 4096 -f host_keys/ssh_host_rsa_key < /dev/null
+ssh-keygen -t ed25519 -f host_keys/ssh_host_ed25519_key -N '' < /dev/null
+ssh-keygen -t rsa -b 4096 -f host_keys/ssh_host_rsa_key -N '' < /dev/null
 
 make deploy
 
