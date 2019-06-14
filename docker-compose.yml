@@ -32,5 +32,5 @@ services:
     ports:
       - "2222:22"
     command: gis::::tiles
-    depends_on: th
+    depends_on: [th]
     restart: unless-stopped
