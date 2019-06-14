@@ -19,8 +19,18 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./tiles:/tilehut/data:rw
+      - ./tiles:/tilehut/data:ro
     ports:
       - 8000:8000
     restart: unless-stopped
-  
+  ftp:
+    image: atmoz/sftp
+    volumes:
+      - ./tiles:/home/gis/tiles:rw
+      - ./pub_keys:/home/gis/.ssh/keys:ro
+      - ./hos_keys:/etc/ssh:rw
+    ports:
+      - "2222:22"
+    command: gis::::tiles
+    depends_on: th
+    restart: unless-stopped
