@@ -24,10 +24,11 @@ Replace the nginx/nginx/th.frb-data.dk file with one that describes your domain.
 You need to deploy this to a server that has a fully qualified domain name, and the ports 80, 443 and 2222 need to be free and open.
 
 Also replace th.frb-data.dk with you domain name in the init.sh script.
+And replace gis.frederiksberg.dk with an email you own.
 
 Then run
 ```shell
-# init.sh
+# sh init.sh
 ```
 
 This will setup nginx with https and and set up auto renewal.
