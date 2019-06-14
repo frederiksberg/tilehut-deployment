@@ -28,7 +28,7 @@ services:
     volumes:
       - ./tiles:/home/gis/tiles:rw
       - ./pub_keys:/home/gis/.ssh/keys:ro
-      - ./hos_keys:/etc/ssh:rw
+      - ./host_keys:/etc/ssh:rw
     ports:
       - "2222:22"
     command: gis::::tiles
