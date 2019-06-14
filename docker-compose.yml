@@ -24,7 +24,7 @@ services:
       - 8000:8000
     restart: unless-stopped
   ftp:
-    image: atmoz/sftp
+    image: atmoz/sftp:latest
     volumes:
       - ./tiles:/home/gis/tiles:rw
       - ./pub_keys:/home/gis/.ssh/keys:ro
