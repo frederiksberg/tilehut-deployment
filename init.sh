@@ -19,7 +19,7 @@ echo -e "$GREEN--> Waiting 10s for nginx to gen DH keys$RESET"
 sleep 10 # Sleep for 10 seconds. If this is not enough try again.
 
 echo -e "$GREEN--> Getting certificate$RESET"
-docker exec tilehut-deployment_nginx_1 certbot --nginx -d th.frb-data.dk -n --agree-tos --no-eff-email -m gis@frederiksberg.dk
+docker exec tilehut-deployment_nginx_1 certbot --nginx -d th.frb-data.dk -n --agree-tos --no-eff-email -m gis@frederiksberg.dk --staging
 
 echo -e "$GREEN--> Setting up auto renewal$RESET"
 docker exec tilehut-deployment_nginx_1 sh -c 'echo ''certbot renew --post-hook "systemctl reload nginx"'' > /etc/cron.daily'
